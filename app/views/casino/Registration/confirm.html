@@ -1,0 +1,19 @@
+#{extends 'casino/Registration/layout.html' /}
+
+    #{if flash.error}
+        <p class="error">
+            &{flash.error}
+        </p>
+    #{/if}
+    #{if flash.success}
+        <p class="success"> &{flash.success}
+        </p>
+        <ul>
+	        <li>
+	        	<a href="/">回到首页</a>
+	        </li>
+	        <li>
+	            <a href="@{Users.editMyInfo()}">完善资料</a>
+	        </li>
+        </ul>
+    #{/if}
